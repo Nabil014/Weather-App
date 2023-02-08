@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { RiCloseCircleLine } from "react-icons/ri";
 import sunriseIcon from "../assets/sunrise.png";
 import sunsetIcon from "../assets/sunset.png";
@@ -6,13 +6,9 @@ import windIcon from "../assets/wind.png";
 import humidityIcon from "../assets/humidity.png";
 
 const CityDetail = ({ visible, closeModal, city }) => {
-  console.log(city);
   const handleOnClose = (e) => {
     if (e.target.id === "container") closeModal();
   };
-
-  // let date = new Date(sec * 1000);
-  // let timestr = date.toLocaleTimeString();
 
   if (!visible) return null;
   return (
@@ -31,7 +27,7 @@ const CityDetail = ({ visible, closeModal, city }) => {
         <div className="border-solid border-2 border-[#6096B4] rounded-md ">
           {city?.map((e) => {
             return (
-              <div className="p-3">
+              <div className="p-3" key={e.id}>
                 <h2 className="font-nunito text-2xl justify-center flex underline decoration-double decoration-pink-500 p-2 pb-4">
                   {e.name}
                 </h2>
