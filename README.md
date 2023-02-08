@@ -1,7 +1,5 @@
 # Weather App - ReactJS & Vite Project
 
-![](weather.gif)
-
 ### Deployed over Vercel: 
 https://weather-app-beta-roan.vercel.app/
 
